@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{77D64341-D52B-438B-AA2D-51FD649875E4}</ProjectGuid>
+    <RootNamespace>Tangram</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\src;C:\Libraries and Headers\Box2D_v2.1.2\Box2D_v2.1.2\Box2D;C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\include;C:\Libraries and Headers\PolyPartition;C:\Libraries and Headers\cpGUI-v1.5.7\include;C:\Libraries and Headers\myHeaders;C:\Libraries and Headers\boost_1_47_0\boost_1_47_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Libraries and Headers\Box2D_v2.1.2\Box2D_v2.1.2\Box2D\Build\Box2D\Debug;C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\lib\vc2008;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\src;C:\Libraries and Headers\Box2D_v2.1.2\Box2D_v2.1.2\Box2D;C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\include;C:\Libraries and Headers\PolyPartition;C:\Libraries and Headers\cpGUI-v1.5.7\include;C:\Libraries and Headers\myHeaders;C:\Libraries and Headers\boost_1_47_0\boost_1_47_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Libraries and Headers\Box2D_v2.1.2\Box2D_v2.1.2\Box2D\Build\Box2D\Release;C:\Libraries and Headers\SFML\SFML-1.6-sdk-windows-vc2008\SFML-1.6\lib\vc2008;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Box2D.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;sfml-system-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Box2D.lib;sfml-window-s.lib;sfml-graphics-s.lib;sfml-system-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpCheckBox.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpGUI_base.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpImageButton.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpSelection-DropDownBox.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpShapeButton.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpTextBox.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\Libraries and Headers\cpGUI-v1.5.7\src\cpTextInputBox.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common Properties.h" />
+    <ClInclude Include="cpGUI.h" />
+    <ClInclude Include="Cut Screen.h" />
+    <ClInclude Include="Design Screen.h" />
+    <ClInclude Include="Splash Screen.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
